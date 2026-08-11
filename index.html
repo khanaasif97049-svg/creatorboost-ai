@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CreatorBoost AI — Free YouTube Creator Tools</title>
+<meta name="description" content="Free YouTube title, description, hashtag, Shorts idea and AI video prompt generators.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#eef2ff}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #26304d}
+.logo{font-size:23px;font-weight:800}.logo span{color:#7c8cff}
+.hero{padding:55px 7% 30px;text-align:center}.hero h1{font-size:42px;margin:10px 0}.hero p{color:#b8c1d9;font-size:17px}
+.grid{width:86%;max-width:1100px;margin:25px auto 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:#121a30;border:1px solid #293554;border-radius:18px;padding:22px}.card h2{margin-top:0}
+input,textarea,select,button{width:100%;padding:13px;margin:7px 0;border-radius:10px;border:1px solid #354263;background:#0d1427;color:#fff;font-size:15px}
+button{background:#6575ff;border:0;font-weight:700;cursor:pointer}.out{white-space:pre-wrap;background:#0a1020;padding:12px;border-radius:10px;min-height:70px;color:#dce3ff}
+footer{text-align:center;padding:30px;color:#8f9ab8;border-top:1px solid #26304d}
+@media(max-width:600px){.hero h1{font-size:31px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Creator<span>Boost AI</span></div><div>100% Free</div></header>
+
+<section class="hero">
+<h1>Free YouTube Creator Tools 🚀</h1>
+<p>Create titles, descriptions, hashtags, Shorts ideas and video prompts in seconds.</p>
+</section>
+
+<main class="grid">
+<section class="card">
+<h2>🎯 Title Generator</h2>
+<input id="topic" placeholder="Enter your video topic">
+<button onclick="titleGen()">Generate Titles</button>
+<div id="titleOut" class="out"></div>
+</section>
+
+<section class="card">
+<h2>📝 Description Generator</h2>
+<input id="descTopic" placeholder="Enter video topic">
+<button onclick="descGen()">Generate Description</button>
+<div id="descOut" class="out"></div>
+</section>
+
+<section class="card">
+<h2>#️⃣ Hashtag Generator</h2>
+<input id="hashTopic" placeholder="Enter niche/topic">
+<button onclick="hashGen()">Generate Hashtags</button>
+<div id="hashOut" class="out"></div>
+</section>
+
+<section class="card">
+<h2>💡 Shorts Ideas</h2>
+<input id="ideaTopic" placeholder="Example: kids songs, gaming, AI">
+<button onclick="ideaGen()">Generate Ideas</button>
+<div id="ideaOut" class="out"></div>
+</section>
+
+<section class="card">
+<h2>🎬 AI Video Prompt</h2>
+<input id="promptTopic" placeholder="Example: fruit transforms into a car">
+<button onclick="promptGen()">Generate Prompt</button>
+<div id="promptOut" class="out"></div>
+</section>
+
+<section class="card">
+<h2>🖼️ Thumbnail Prompt</h2>
+<input id="thumbTopic" placeholder="Enter video topic">
+<button onclick="thumbGen()">Generate Prompt</button>
+<div id="thumbOut" class="out"></div>
+</section>
+</main>
+
+<footer>© 2026 CreatorBoost AI • Free creator tools</footer>
+
+<script>
+const val=id=>document.getElementById(id).value.trim();
+function titleGen(){
+ let x=val("topic")||"your topic";
+ document.getElementById("titleOut").textContent=
+`1. ${x} — You Won't Believe What Happens! 🔥
+2. The Ultimate ${x} Challenge 😱
+3. I Tried ${x}... Here's What Happened!
+4. ${x} in 30 Seconds 🚀
+5. 5 Amazing ${x} Ideas You Need to See`;
+}
+function descGen(){
+ let x=val("descTopic")||"this video";
+ document.getElementById("descOut").textContent=
+`Welcome to the video! 🎬
+
+Today we're exploring ${x}. Watch until the end for the best part!
+
+👍 Like • 💬 Comment • 🔔 Subscribe
+
+#YouTube #Shorts #Creator`;
+}
+function hashGen(){
+ let x=val("hashTopic")||"youtube";
+ let clean=x.replace(/[^a-zA-Z0-9 ]/g,"").replace(/\s+/g,"");
+ document.getElementById("hashOut").textContent=
+`#${clean} #YouTube #YouTubeShorts #Shorts #Viral #Trending #Creator #ContentCreator #Video #Explore`;
+}
+function ideaGen(){
+ let x=val("ideaTopic")||"YouTube";
+ document.getElementById("ideaOut").textContent=
+`1. 30-second challenge about ${x}
+2. Before vs After: ${x}
+3. 5 surprising facts about ${x}
+4. Can you guess the answer? ${x}
+5. Transform something using ${x}
+6. Beginner vs Expert: ${x}
+7. The most unusual ${x} idea
+8. 3 mistakes creators make with ${x}`;
+}
+function promptGen(){
+ let x=val("promptTopic")||"a creative YouTube Short";
+ document.getElementById("promptOut").textContent=
+`Create a vertical 9:16 cinematic YouTube Short about "${x}". Fast engaging opening, colorful visuals, smooth camera movement, clear subject focus, energetic pacing, family-friendly presentation, highly detailed 3D animation, bright lighting, seamless transitions, strong final shot.`;
+}
+function thumbGen(){
+ let x=val("thumbTopic")||"a YouTube video";
+ document.getElementById("thumbOut").textContent=
+`Create a high-click YouTube thumbnail for "${x}". One clear main subject, expressive visual action, dramatic composition, bright contrast, clean background, large readable 2–4 word text area, professional creator style, 16:9, sharp details, instantly understandable at small size.`;
+}
+</script>
+</body>
+</html>
